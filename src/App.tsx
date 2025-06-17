@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+// Pages
+import { PageLogin } from "./pages"
 
 function App() {
 
   return (
-    <div className="dark dark:bg-black dark:text-white">
-      <h1 className="text-3xl font-bold underline">Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PageLogin />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
