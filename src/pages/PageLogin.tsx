@@ -1,3 +1,4 @@
+// Components
 import { 
   Card,
   CardHeader,
@@ -10,11 +11,26 @@ import {
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
+import { Switch } from "@/components/ui/switch"
 
+// Icons
+import { Moon, Sun } from "lucide-react"
+
+// Contexts
+import { useTheme } from "@/context"
 
 const PageLogin = () => {
+  const { theme, setTheme } = useTheme()
+
   return (
     <div className='h-full w-full flex items-center justify-center'>
+      <Switch
+        className="absolute top-4 right-4"
+        defaultChecked={ theme == 'light' }
+        onCheckedChange={ () => setTheme( theme == 'dark' ? 'light' : 'dark' ) }
+        checkedIcon={ ( props ) => <Sun { ...props } /> }
+        unCheckedIcon={ ( props ) => <Moon { ...props } /> }
+      />
       <Card className="max-w-sm w-xs">
         <CardHeader>
           <CardTitle>Login to your account</CardTitle>
