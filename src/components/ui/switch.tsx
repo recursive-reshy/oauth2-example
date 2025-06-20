@@ -4,8 +4,7 @@ import * as SwitchPrimitive from "@radix-ui/react-switch"
 import { cn } from "@/lib/utils"
 
 // Icons
-import Icon from "@/components/Icon"
-import type { Icon as IconType } from "@/components/Icon"
+import { Icon, type Icon as IconType } from "@/components"
 
 interface SwitchProps extends React.ComponentProps< typeof SwitchPrimitive.Root > {
   checkedIcon?: IconType
