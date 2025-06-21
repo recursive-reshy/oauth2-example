@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+// TODO: Rector to export a single component. Header, Footer, Content, Action, Description, Title should be rendered conditionally.
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
