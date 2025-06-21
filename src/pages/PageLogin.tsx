@@ -8,9 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-  Input,
-  Label,
   Switch,
+  InputFloatingLabel,
 } from "@/components"
 
 // Icons
@@ -45,25 +44,23 @@ const PageLogin = () => {
           <form>
             <div className="flex flex-col gap-6">
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
+                <InputFloatingLabel
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  label="Email"
                   required
+                  handleChange={ ( e ) => {
+                    console.log( e.target.value )
+                  } }
                 />
               </div>
               <div className="grid gap-2">
-                <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
-                  <a
-                    href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a>
-                </div>
-                <Input id="password" type="password" required />
+                <InputFloatingLabel
+                  id="password"
+                  type="password"
+                  label="Password"
+                  required
+                />
               </div>
             </div>
           </form>
