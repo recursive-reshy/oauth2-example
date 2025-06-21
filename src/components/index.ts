@@ -3,8 +3,9 @@ import { Button } from "./ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter } from "./ui/card"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
-import { Switch } from "./ui/switch"
+import Switch from "./ui/switch"
 
+import InputFloatingLabel from "./ui/InputFloatingLabel"
 import Icon from "./Icon"
 
 export { 
@@ -19,5 +20,6 @@ export {
   Input,
   Label,
   Switch,
+  InputFloatingLabel,
   Icon, 
 }
