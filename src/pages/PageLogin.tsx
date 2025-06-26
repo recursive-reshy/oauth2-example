@@ -2,18 +2,20 @@
 import { 
   Button,
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
   Switch,
   InputFloatingLabel,
+  Divider,
 } from "@/components"
 
 // Icons
 import { Moon, Sun } from "lucide-react"
+import AppLogo from "@/icons/AppLogo"
+import MetaIcon from "@/icons/MetaIcon"
+import AppleIcon from "@/icons/AppleIcon"
+import GoogleIcon from "@/icons/GoogleIcon"
 
 // Contexts
 import { useTheme } from "@/context"
@@ -31,14 +33,10 @@ const PageLogin = () => {
         unCheckedIcon={ ( props ) => <Moon { ...props } /> }
       />
       <Card className="max-w-sm w-xs">
-        <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
-          <CardAction>
-            <Button variant="link">Sign Up</Button>
-          </CardAction>
+        <CardHeader className="flex justify-center">
+          <div>
+            <AppLogo fontSize={ 48 } /> Otter Fam
+          </div>
         </CardHeader>
         <CardContent>
           <form>
@@ -62,16 +60,26 @@ const PageLogin = () => {
                   required
                 />
               </div>
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
             </div>
           </form>
         </CardContent>
+        <Divider variant="inset">Or</Divider>
+
         <CardFooter className="flex-col gap-2">
-          <Button type="submit" className="w-full">
-            Login
-          </Button>
-          <Button variant="outline" className="w-full">
-            Login with Google
-          </Button>
+          <div className="flex justify-between w-full">            
+            <Button variant="secondary" size="icon" className="size-8 w-20">
+              <AppleIcon />
+            </Button>
+            <Button variant="secondary" size="icon" className="size-8 w-20">
+              <MetaIcon />
+            </Button>
+            <Button variant="secondary" size="icon" className="size-8 w-20">
+              <GoogleIcon />
+            </Button>
+          </div>
         </CardFooter>
       </Card>
     </div>
