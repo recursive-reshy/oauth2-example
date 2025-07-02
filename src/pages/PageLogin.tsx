@@ -8,17 +8,17 @@ import {
   Switch,
   InputFloatingLabel,
   Divider,
-} from "@/components"
+} from '@/components'
 
 // Icons
-import { Moon, Sun } from "lucide-react"
-import AppLogo from "@/icons/AppLogo"
-import MetaIcon from "@/icons/MetaIcon"
-import AppleIcon from "@/icons/AppleIcon"
-import GoogleIcon from "@/icons/GoogleIcon"
+import { Moon, Sun } from 'lucide-react'
+import AppLogo from '@/icons/AppLogo'
+import MetaIcon from '@/icons/MetaIcon'
+import AppleIcon from '@/icons/AppleIcon'
+import GoogleIcon from '@/icons/GoogleIcon'
 
 // Contexts
-import { useTheme } from "@/context"
+import { useTheme } from '@/context'
 
 const PageLogin = () => {
   const { theme, setTheme } = useTheme()
